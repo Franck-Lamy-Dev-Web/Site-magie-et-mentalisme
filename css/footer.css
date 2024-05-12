@@ -1,0 +1,107 @@
+footer{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+
+    font-family: "poppins_l";
+    font-size: 1rem;
+
+    color: #ffffff;
+
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,40,1) 90%, rgba(0,0,80,1) 100%);
+}
+
+footer h2 a{
+    font-family: "poppins_l";
+    font-size: 1.5rem;
+
+    color: #ffffff;
+
+    /* text-decoration: underline; */
+}
+
+footer .copy{
+    padding: 1%;
+
+    width: 70%;
+}
+
+footer .social_media{
+    width: 10%;
+
+    padding: 1%;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .social_media a{
+    margin: auto 5%;
+
+    font-size: 3rem;
+
+    color: #ffffff;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1400px) {
+
+    footer .social_media a {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 1500px) {
+
+    footer h2{
+        font-size: 1.5rem;
+    }
+    
+    footer h2 a{
+        font-size: 1.5rem;
+    }
+    
+    footer .copy{
+        width: 80%;
+    }
+    
+    footer .social_media{
+        width: 20%;
+    }  
+
+}
+
+@media screen and (max-width: 700px) {
+
+    footer h2{
+        font-size: 1.2rem;
+    }
+    
+    footer h2 a{
+        font-size: 1.2rem;
+    }
+    
+    footer .copy{
+        width: 70%;
+    }
+    
+    footer .social_media{
+        width: 30%;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+    
+    footer .social_media a{
+        margin: auto 5%;
+    
+        font-size: 2rem;
+    }
+    
+
+}

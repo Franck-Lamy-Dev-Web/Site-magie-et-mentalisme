@@ -1,0 +1,37 @@
+/* Reset */
+
+    *{
+        margin: 0px;
+        padding: 0px;
+
+        list-style: none;
+        text-decoration: none;
+
+        box-sizing: border-box;
+    }
+
+/* Smooth-Scroll */
+
+    html{
+        scroll-behavior: smooth;
+
+        font-size: 10px;   
+    }
+
+
+/* Importation police */
+
+    @font-face {
+        font-family: "poppins";
+        src: url(../fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+    }
+
+    @font-face {
+        font-family: "poppins_l";
+        src: url(../fonts/Poppins/Poppins-Light.ttf) format("truetype");
+    }
+
+    @font-face {
+        font-family: "nunito_sans";
+        src: url(../fonts/Nunito_Sans/NunitoSans-Regular.ttf) format("truetype");
+    }

@@ -1,0 +1,144 @@
+/* barre de navigation */
+
+nav{
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    height: 80px;
+
+    background: rgb(105,10,245);
+    background: linear-gradient(90deg, rgba(105,10,245,1) 0%, rgba(65,20,140,1) 85%);
+
+    font-family: "poppins";
+
+    padding: 0 5%;
+}
+
+nav .logo{
+    float: left;
+
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 4rem;
+    color: white;
+}
+
+nav .btn{
+    float: right;
+
+    width: 60%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .btn a{
+    font-size: 2.5rem;
+
+    color: white;
+
+/* text-transform: uppercase; */
+
+    transition-duration: 0.5s;
+}
+
+nav .btn a:hover{
+    color: #cca0ff;
+}
+
+#nav-toggle{
+    position: absolute;
+
+    display: none;
+}
+
+nav .icon{
+    display: none;
+
+    position: absolute;
+    right: 5%;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+nav .icon .line{
+    width: 30px;
+    height: 5px;
+
+    margin: 5px;
+
+    background-color: white;
+
+    border-radius: 3px;
+}
+
+/* Partie responsive barre de navigation */
+
+@media screen and (max-width: 1000px) {
+
+    nav .logo{
+        font-size: 3em;
+    }
+
+    nav .btn a{
+        font-size: 1.5em;
+    }
+
+}
+
+@media screen and (max-width: 765px) {
+
+    nav .logo{
+        float: none;
+        justify-content: center;
+
+        width: auto;
+    }
+
+    nav .btn{
+        float: none;
+        position: fixed;
+        flex-direction: column;
+
+        left: 0;
+        right: 0;
+        top: 80px;
+        bottom: 100%;
+
+        width: auto;
+        height: auto;
+
+        overflow: hidden;
+        
+        z-index: 9;
+
+        background-color: #070330;
+
+        transition: all 0.5s ease-in-out;
+    }
+
+    nav .btn a{
+        font-size: 3rem;
+    }
+
+    nav .icon{
+        display: block;
+    }
+
+    nav :checked ~ .btn{
+        bottom: 0%;
+    }
+
+}
+
+/* Fin barre de navigation */

@@ -1,0 +1,352 @@
+#galerie{
+     position: relative;
+
+     height: 100vh;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: start;
+     background: rgb(0,0,0);
+     background:  radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,40,1) 90%, rgba(0,0,80,1) 100%) ;
+     color: rgba(105,10,245,1);
+
+}
+#galerie h1{
+     font-size: 10rem;
+     font-family: "poppins_l";
+ 
+     margin-top: 5%;
+     margin-bottom: 3%;
+ 
+     text-align: center;
+ 
+     color: rgba(105,10,245,1);
+}
+.slider-container{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+.slider{
+     position: relative;
+     width: calc(16*64px);
+     height: calc(9*64px);
+     border: 3px solid white;
+     overflow: hidden;
+
+}
+.slider-img{
+     width: inherit;
+     opacity: 0;
+     transition: opacity 0.5s;
+     position: absolute;
+}
+
+.active{
+     opacity: 1;
+     animation: gaucheDroite 0.5s;
+}
+.leftToRight{
+     animation: gaucheDroite 0.5s;
+}
+.rightToLeft{
+     animation: droiteGauche 0.5s;
+}
+.arrows{
+     font-size: 50px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     width: 75vw;
+     
+
+}
+
+.left-arrow:hover, .right-arrow:hover{
+     cursor: pointer;
+}
+
+.arrows .left-arrow {
+     display: flex;
+     align-items: center;
+     justify-content: end;
+}
+.arrows .right-arrow {
+     display: flex;
+     align-items: center;
+     justify-content: start;
+}
+.arrrows .right-arrow img:hover{
+     background-color: red;
+     transform: scale(1.2);
+}
+.arrows div img{
+     width: 30%;
+}
+.arrows .left-arrow img{
+     transform: rotateY(180deg);
+     transition: transform 0.3s ease-in-out;
+}
+
+
+.arrows .right-arrow img{
+     transition: transform 0.3s ease-in-out;
+}
+
+/* Seulement pour petit pc portable et plus : */
+
+@media screen and (min-width: 1031px) {
+     .arrows .left-arrow img:hover{
+          transform: scale(1.1) rotateY(180deg) translateX(10px);
+     }
+     .arrows .right-arrow img:hover{
+          transform: scale(1.1) translateX(10px);
+     }
+}
+
+
+@media screen and (max-width: 1031px)and (min-height: 1000) {
+     .slider{
+          width: calc(16*48px);
+          height: calc(9*48px);
+     
+     }
+     .arrows div img{
+          width: 50%;
+     }
+     #galerie h1{
+          font-size: 8rem;
+          margin-bottom: 10%;
+          margin-top: 15%;
+
+     }
+}
+@media screen and (max-width: 930px) {
+     .slider{
+          width: calc(16*40px);
+          height: calc(9*40px);
+     
+     }
+     #galerie h1{
+          font-size: 6rem;
+          margin-bottom: 6%;
+     }
+}
+
+ @media screen and (max-width: 768px) {
+     .slider{
+          width: calc(16*36px);
+          height: calc(9*36px);
+     
+     }
+     .arrows div img{
+          width: 100%;
+     }
+}
+@media screen and (max-width: 700px) {
+     #galerie h1{
+          font-size: 6rem;
+          margin-bottom: 15%;
+     }
+}
+@media screen and (max-width: 575px) {
+     .slider{
+          width: calc(16*32px);
+          height: calc(9*32px);
+     
+     }
+}
+@media screen and (max-width: 512px) {
+     .slider{
+          width: calc(16*28px);
+          height: calc(9*28px);
+          margin-top: 20%;
+     
+     }
+     #galerie h1{
+          font-size: 5rem;
+          margin-bottom: 20%;
+     }
+}
+@media screen and (max-width: 450px) {
+     .slider{
+          width: calc(16*24px);
+          height: calc(9*24px);
+     
+     }
+}
+@media screen and (max-width: 425px) {
+     .slider{
+          width: calc(16*20px);
+          height: calc(9*20px);
+          margin-top: 30%;
+     
+     }
+     #galerie h1{
+          font-size: 3.5rem;
+          margin-top: 30%;
+     }
+}
+@media screen and (max-width: 320px) {
+     .slider{
+          width: calc(16*1px);
+          height: calc(9*1px);
+          margin-top: 30%;
+     
+     }
+     #galerie h1{
+          font-size: 3rem;
+          margin-top: 30%;
+     }
+}
+
+
+@media screen and (max-height: 680px) and (max-width: 513px) {
+     #galerie h1{
+          font-size: 6rem;
+     }
+     .slider{
+          width: calc(16*24px);
+          height: calc(9*24px);
+     
+     }
+}
+@media screen and (max-height: 900px) {
+     #galerie h1{
+          font-size: 6rem;
+          margin-bottom: 2%;
+     }
+     .slider{
+          width: calc(16*48px);
+          height: calc(9*48px);
+     
+     }
+}
+
+@media screen and (max-height: 900px) and (max-width: 1000px) {
+     #galerie h1{
+          font-size: 3rem;
+          margin-bottom: 2%;
+     }
+     .slider{
+          width: calc(16*30px);
+          height: calc(9*30px);
+     
+     }
+}
+@media screen and (max-height: 900px) and (max-width: 450px) {
+     #galerie h1{
+          font-size: 3rem;
+          margin-bottom: 2%;
+     }
+     .slider{
+          width: calc(16*20px);
+          height: calc(9*20px);
+     
+     }
+}
+@media screen and (max-height: 750px) {
+     #galerie h1{
+          font-size: 6rem;
+          margin-bottom: 5%;
+     }
+     .slider{
+          width: calc(16*32px);
+          height: calc(9*32px);
+     
+     }
+}
+@media screen and (max-height: 750px) and (max-width: 513px) {
+     #galerie h1{
+          font-size: 5rem;
+          margin-bottom: 4%;
+     }
+     .slider{
+          width: calc(16*28px);
+          height: calc(9*28px);
+     
+     }
+}
+@media screen and (max-height: 750px) and (max-width: 450px) {
+     #galerie h1{
+          font-size: 4rem;
+          margin-bottom: 2%;
+     }
+     .slider{
+          width: calc(16*22px);
+          height: calc(9*22px);
+     
+     }
+}
+@media screen and (max-height: 750px) and (max-width: 360px) {
+     #galerie h1{
+          font-size: 3rem;
+          margin-bottom: 1%;
+     }
+     .slider{
+          width: calc(16*20px);
+          height: calc(9*20px);
+     
+     }
+}
+@media screen and (max-height: 750px) and (max-width: 320px) {
+     #galerie h1{
+          font-size: 3rem;
+          margin-bottom: 0%;
+     }
+     .slider{
+          width: calc(16*15px);
+          height: calc(9*15px);
+     
+     }
+}
+
+/* Autre hauteur */
+
+@media screen and (max-height: 600px) and (max-width: 1025px) {
+     #galerie h1{
+          font-size: 5rem;
+          margin-top: 7%;
+     }
+     .slider{
+          width: calc(16*28px);
+          height: calc(9*28px);
+     
+     }
+}
+@media screen and (max-height: 600px) and (max-width: 450px) {
+     #galerie h1{
+          font-size: 4rem;
+          margin-bottom: 2%;
+     }
+     .slider{
+          width: calc(16*22px);
+          height: calc(9*22px);
+     
+     }
+}
+@media screen and (max-height: 600px) and (max-width: 360px) {
+     #galerie h1{
+          font-size: 3rem;
+          margin-bottom: 1%;
+     }
+     .slider{
+          width: calc(16*20px);
+          height: calc(9*20px);
+     
+     }
+}
+@media screen and (max-height: 600px) and (max-width: 320px) {
+     #galerie h1{
+          font-size: 3rem;
+          margin-bottom: 0%;
+     }
+     .slider{
+          width: calc(16*15px);
+          height: calc(9*15px);
+     
+     }
+}
